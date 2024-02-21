@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
+      flash[:notice] = 'Resturant was created successfully!.'
       redirect_to @restaurant
     else
       render :new

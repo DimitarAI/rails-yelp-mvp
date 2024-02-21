@@ -28,6 +28,9 @@
         </ul>
       </div>
     </nav>
+    <h2><% flash.each do |name, msg| %>
+      <%= msg %>
+    <% end %></h2>
 
     <%= yield %>
   </body>
